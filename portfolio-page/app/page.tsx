@@ -3,38 +3,68 @@ import ProjectCard from "@/app/components/ProjectCard";
 import ExperienceCard from "@/app/components/ExperienceCard";
 import AwardItem from "@/app/components/AwardItem";
 import { Mail } from "lucide-react";
+import ImageSlideshow from "@/app/components/ImageSlideshow";
+import CertificationItem from "@/app/components/CertificationItem";
 
 export default function Home() {
+  // Placeholder images for the slideshow - replace these with your actual pictures
+  const heroImages = [
+    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-[#111111] font-sans text-zinc-300">
       <NavBar />
-      <main className="flex-1 w-full max-w-6xl mx-auto py-20 px-6 flex flex-col gap-24">
-        {/* Hero Section */}
-        <section className="flex flex-col gap-6">
-          <p className="font-mono text-amber-500 text-sm">// hello, world</p>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-white leading-[1.1]">
-            Tahsan<br />
-            <span className="text-amber-500">Samin .</span>
-          </h1>
-          <div className="max-w-2xl text-lg md:text-xl text-zinc-400 mt-4 space-y-6">
-            <p>
-              CS + Stats student at the University of British Columbia. I specialize in building RAG pipelines, agentic AI, and multi-step agent architectures.
+      <main className="flex-1 w-full max-w-6xl mx-auto py-8 md:py-20 px-6 flex flex-col gap-24">
+
+        {/* Hero Section with Slideshow Background */}
+        <section className="relative w-full h-[600px] md:h-[750px] rounded-3xl overflow-hidden flex items-center justify-center border border-zinc-800/50">
+          {/* Background Slideshow */}
+          <ImageSlideshow images={heroImages} />
+
+          {/* Gradient Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-[#111111] pointer-events-none z-0" />
+
+          {/* Text Content */}
+          <div className="relative z-10 flex flex-col items-center text-center gap-6 px-6 max-w-3xl">
+            <p className="font-mono text-amber-500 text-sm md:text-base drop-shadow-md">
+              print("Tahsan Samin")
+
             </p>
-            <p>
-              Experienced in Python, JavaScript, Java, React, and FastAPI. Passionate about machine learning and backend infrastructure.
-            </p>
-          </div>
-          <div className="flex items-center gap-6 mt-4">
-            <a href="mailto:tahsansamin@gmail.com" className="flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors font-mono text-sm">
-              <Mail className="w-4 h-4" />
-              tahsansamin@gmail.com
-            </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-zinc-300 transition-colors">
-              <GithubIcon className="w-5 h-5" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-zinc-300 transition-colors">
-              <LinkedinIcon className="w-5 h-5" />
-            </a>
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-2xl">
+              Tahsan<br />
+              <span className="text-amber-500">Samin .</span>
+            </h1>
+            <div className="text-lg md:text-xl text-zinc-200 mt-4 space-y-4 drop-shadow-md">
+              <p>
+                CS + Stats
+              </p>
+              <p>
+                Experienced in Python, JavaScript, Java, React, and FastAPI.
+                <br>
+                </br>
+                Full stack and AI engineering
+              </p>
+              <p>
+                I am a software engineer passionate about building systems with a vision and community oriented purpose.
+
+              </p>
+            </div>
+            <div className="flex items-center gap-6 mt-6 bg-black/30 px-6 py-3 rounded-full backdrop-blur-md border border-white/10">
+              <a href="mailto:tahsansamin@gmail.com" className="flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors font-mono text-sm">
+                <Mail className="w-4 h-4" />
+                <span className="hidden sm:inline">tahsansamin@gmail.com</span>
+              </a>
+              <div className="w-px h-4 bg-zinc-700"></div>
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                <GithubIcon className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </section>
 
@@ -65,16 +95,16 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-6">
             <AwardItem
-              title="Karen McKellin International Leader of Tomorrow Scholar"
+              title="Karen McKellin International Leader of Tomorrow Scholar (1 of 30 worlwide)"
               issuer="University of British Columbia"
-              date="Current"
-              description="Awarded a full ride scholarship, selected as 1 of 30 worldwide for outstanding academic achievement and leadership skills."
+              date="April 2025"
+              description="Awarded a full ride scholarship, recognizing community service, exceptional leadership and extracurricular achievements"
             />
             <AwardItem
               title="Dean's Scholar"
               issuer="University of British Columbia"
               date="Current"
-              description="Recognized for exceptional academic excellence and maintaining top-tier grades in the Faculty of Science."
+              description="Recognizes students with sessional averages above 90%."
             />
           </div>
         </section>
@@ -86,7 +116,7 @@ export default function Home() {
             <div className="h-px bg-zinc-800/60 flex-1"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ProjectCard 
+            <ProjectCard
               id="glimpse-uganda"
               title="GlimpseUganda"
               description="Interactive map-based chatbot for tourism accessibility. Engineered an ingestion pipeline validating documents with LLMs, syncing to Pinecone vector DB."
@@ -94,7 +124,7 @@ export default function Home() {
               codeLink="#"
               liveLink="#"
             />
-            <ProjectCard 
+            <ProjectCard
               id="street-watch"
               title="StreetWatch"
               description="Road surveillance app verifying user-uploaded photos with an EfficientNet ML model. Implemented client-side image compression and spatial deduplication."
@@ -102,19 +132,33 @@ export default function Home() {
               codeLink="#"
               liveLink="#"
             />
-            <ProjectCard 
+            <ProjectCard
               id="rubis-data-entry"
               title="Rubis Data Entry Agent"
               description="Agentic data entry system using LangGraph that parses natural language and populates excel spreadsheets with reasoning loops and tool calling."
               techStack={["LangGraph", "Agentic AI", "React", "FastAPI"]}
               codeLink="#"
             />
-            <ProjectCard 
+            <ProjectCard
               id="ucf-crime-dataset"
               title="UCF Crime Dataset CV"
               description="Fine-tuned Facebook's SlowFast CNN to classify 11 types of criminal activity from CCTV footage for targeted clip extraction."
               techStack={["PyTorch", "Scikit-learn", "NumPy", "Pandas"]}
               codeLink="#"
+            />
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section id="certifications" className="flex flex-col gap-8">
+          <div className="flex items-center gap-4">
+            <h2 className="font-mono text-amber-500 text-sm uppercase tracking-wider">// Certifications</h2>
+            <div className="h-px bg-zinc-800/60 flex-1"></div>
+          </div>
+          <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl px-8 py-2">
+            <CertificationItem
+              title="Deep Learning Specialization by Andrew Ng"
+              date="2024"
             />
           </div>
         </section>
@@ -127,7 +171,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-6">
             <ExperienceCard
-              title="Reinforcement Learning Researcher"
+              title="Reinforcement Learning Research Mentorship"
               company="UBC Undergraduate Research Organization"
               startDate="Sept 2025"
               endDate="Feb 2026"
@@ -154,6 +198,27 @@ export default function Home() {
               description={[
                 "Repaired and configured 80+ laptops and desktops daily including hardware upgrades and troubleshooting.",
                 "Managed client-side technical complaints and provided rapid resolutions."
+              ]}
+            />
+            <ExperienceCard
+              title="Hardware Intern"
+              company="Mercury Computers Uganda"
+              startDate="Jun 2022"
+              endDate="Jul 2022"
+              description={[
+                "Infrastructure Provisioning: Managed the end-to-end setup, deployment, and network configuration of computer systems.",
+                "Isolated and remediated complex hardware and system-level faults."
+              ]}
+            />
+            <ExperienceCard
+              title="Technical Director"
+              company="Bangladeshi Students' Association UBC"
+              startDate="Sept 2025"
+              endDate="May 2026"
+              description={[
+                "Designed and published promotional content driving engagement.",
+                "Planned and executed digital marketing campaigns to promote events and grow the association's online presence.",
+                "Managed on-site technical setup for events."
               ]}
             />
           </div>
