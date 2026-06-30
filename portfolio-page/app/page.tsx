@@ -9,9 +9,14 @@ import CertificationItem from "@/app/components/CertificationItem";
 export default function Home() {
   // Placeholder images for the slideshow - replace these with your actual pictures
   const heroImages = [
-    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+
+    "/WhatsApp Image 2026-06-30 at 12.31.57.jpeg",
+    "/WhatsApp Image 2026-06-30 at 11.30.15.jpeg",
+    "/WhatsApp Image 2026-06-30 at 11.43.53.jpeg",
+    "/WhatsApp Image 2026-06-30 at 12.27.16.jpeg",
+
+    "/WhatsApp Image 2026-06-30 at 11.40.21.jpeg",
+
   ];
 
   return (
@@ -121,7 +126,7 @@ export default function Home() {
               title="GlimpseUganda"
               description="Interactive map-based chatbot for tourism accessibility. Engineered an ingestion pipeline validating documents with LLMs, syncing to Pinecone vector DB."
               techStack={["React", "FastAPI", "LangChain", "RAG", "Pinecone"]}
-              codeLink="#"
+              codeLink="https://github.com/Tahsansamin/GlimpseUganda"
               liveLink="#"
             />
             <ProjectCard
@@ -129,7 +134,7 @@ export default function Home() {
               title="StreetWatch"
               description="Road surveillance app verifying user-uploaded photos with an EfficientNet ML model. Implemented client-side image compression and spatial deduplication."
               techStack={["React", "FastAPI", "PyTorch", "Supabase"]}
-              codeLink="#"
+              codeLink="https://github.com/Tahsansamin/StreetWatch"
               liveLink="#"
             />
             <ProjectCard
@@ -137,14 +142,14 @@ export default function Home() {
               title="Rubis Data Entry Agent"
               description="Agentic data entry system using LangGraph that parses natural language and populates excel spreadsheets with reasoning loops and tool calling."
               techStack={["LangGraph", "Agentic AI", "React", "FastAPI"]}
-              codeLink="#"
+              codeLink="https://github.com/tahsansamin/RubisAgentic"
             />
             <ProjectCard
               id="ucf-crime-dataset"
               title="UCF Crime Dataset CV"
               description="Fine-tuned Facebook's SlowFast CNN to classify 11 types of criminal activity from CCTV footage for targeted clip extraction."
               techStack={["PyTorch", "Scikit-learn", "NumPy", "Pandas"]}
-              codeLink="#"
+              codeLink="https://github.com/Tahsansamin/ucf-crime-dataset-cv"
             />
           </div>
         </section>

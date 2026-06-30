@@ -7,7 +7,7 @@ export default function NavBar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="font-mono font-bold text-lg tracking-tight">
           <Link href="/">
-            <span className="text-amber-500">alex.chen</span>
+            <span className="text-amber-500">tahsansamin</span>
             <span className="text-zinc-500">.dev</span>
           </Link>
         </div>
