@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { ExternalLink, Code2, Play } from "lucide-react";
 
 interface ProjectCardProps {
-  id: string;
   title: string;
   description: string;
   techStack: string[];
@@ -12,7 +10,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  id,
   title,
   description,
   techStack,
@@ -22,10 +19,6 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="group relative bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-6 hover:border-amber-500/50 transition-colors flex flex-col gap-4 h-full">
-      <Link href={`/projects/${id}`} className="absolute inset-0 z-10">
-        <span className="sr-only">View Project Details</span>
-      </Link>
-      
       <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
         {title}
       </h3>

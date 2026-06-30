@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-6">
             <AwardItem
-              title="Karen McKellin International Leader of Tomorrow Scholar (1 of 30 worlwide)"
+              title="Karen McKellin International Leader of Tomorrow Scholar (1 of 30 worldwide)"
               issuer="University of British Columbia"
               date="April 2025"
               description="Awarded a full ride scholarship, recognizing community service, exceptional leadership and extracurricular achievements"
@@ -122,35 +122,45 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ProjectCard
-              id="glimpse-uganda"
-              title="GlimpseUganda"
-              description="Interactive map-based chatbot for tourism accessibility. Engineered an ingestion pipeline validating documents with LLMs, syncing to Pinecone vector DB."
+              title="GlimpseUganda (April 2026)"
+              description="Interactive map-based chatbot for tourism accessibility. Features a map where tourists can ask 15 different cities/touristic sites questions. Designed to improve tourism accessibility in Uganda by providing a all in one platform for tourists' queries."
               techStack={["React", "FastAPI", "LangChain", "RAG", "Pinecone"]}
               codeLink="https://github.com/Tahsansamin/GlimpseUganda"
-              liveLink="#"
+              liveLink="https://glimpse-uganda.vercel.app/"
             />
+            
             <ProjectCard
-              id="street-watch"
-              title="StreetWatch"
-              description="Road surveillance app verifying user-uploaded photos with an EfficientNet ML model. Implemented client-side image compression and spatial deduplication."
+              title="StreetWatch (April 2026)"
+              description="Road surveillance app where users report road hazards through pictures on their mobile phones, generating a map for authorities to use. Designed with the vision of reducing road surveillance costs for authorities."
               techStack={["React", "FastAPI", "PyTorch", "Supabase"]}
               codeLink="https://github.com/Tahsansamin/StreetWatch"
-              liveLink="#"
+              liveLink="https://street-watch-six.vercel.app/"
             />
             <ProjectCard
-              id="rubis-data-entry"
-              title="Rubis Data Entry Agent"
-              description="Agentic data entry system using LangGraph that parses natural language and populates excel spreadsheets with reasoning loops and tool calling."
+              title="Rubis Data Entry Agent (June 2026)"
+              description="Agentic data entry system using LangGraph that parses natural language and populates excel spreadsheets, replacing manual data entry."
               techStack={["LangGraph", "Agentic AI", "React", "FastAPI"]}
               codeLink="https://github.com/tahsansamin/RubisAgentic"
             />
             <ProjectCard
-              id="ucf-crime-dataset"
-              title="UCF Crime Dataset CV"
+              title="UCF Crime Dataset CV (June 2025)"
               description="Fine-tuned Facebook's SlowFast CNN to classify 11 types of criminal activity from CCTV footage for targeted clip extraction."
               techStack={["PyTorch", "Scikit-learn", "NumPy", "Pandas"]}
               codeLink="https://github.com/Tahsansamin/ucf-crime-dataset-cv"
             />
+            <ProjectCard
+              title="Woda (October 2022)"
+              description="Women-only ride-hailing app inspired by Uganda’s boda boda culture, built with React and Django. I designed the platform to address safety gaps in informal transport, presented it at the Aga Khan Business Expo 2022, and developed the supporting business plan, revenue model, and market strategy."
+              techStack={["React", "Django", "REST APIs"]}
+              codeLink="https://github.com/tahsansamin/Woda"
+            />
+            <ProjectCard
+              title="Business Dashboard App (September 2023)"
+              description="Delivered an internal business dashboard for Rubis Energies Kyebando, Uganda using React and Django. It enabled branch staff to log daily fuel sales through a streamlined interface, manage records, generate reports, and replaced the old spreadsheet workflow with a complete full-stack application handed off to the client."
+              techStack={["React", "Django", "REST APIs"]}
+              codeLink="https://github.com/tahsansamin/Rubis-App"
+            />
+            
           </div>
         </section>
 
@@ -226,6 +236,31 @@ export default function Home() {
                 "Managed on-site technical setup for events."
               ]}
             />
+          </div>
+        </section>
+
+        <section id="contact" className="flex flex-col gap-6 pt-4 pb-12">
+          <div className="flex items-center gap-4">
+            <h2 className="font-mono text-amber-500 text-sm uppercase tracking-wider">// Contact</h2>
+            <div className="h-px bg-zinc-800/60 flex-1"></div>
+          </div>
+
+          <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold text-white">Let&apos;s connect</h3>
+              <p className="text-zinc-400 mt-2">Feel free to reach out for collaborations, opportunities, or just to say hi.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 text-sm font-mono">
+              <a href="mailto:tahsansamin@gmail.com" className="text-amber-500 hover:text-amber-400 transition-colors">
+                tahsansamin@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/tahsan-samin-44b9801b1/" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://github.com/tahsansamin" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                GitHub
+              </a>
+            </div>
           </div>
         </section>
 
