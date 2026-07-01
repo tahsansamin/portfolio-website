@@ -63,10 +63,10 @@ export default function Home() {
                 <span className="hidden sm:inline">tahsansamin@gmail.com</span>
               </a>
               <div className="w-px h-4 bg-zinc-700"></div>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <a href="https://github.com/tahsansamin" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
                 <GithubIcon className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/in/tahsan-samin-44b9801b1/" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
                 <LinkedinIcon className="w-5 h-5" />
               </a>
             </div>
