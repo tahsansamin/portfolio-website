@@ -7,6 +7,7 @@ interface ProjectCardProps {
   codeLink?: string;
   demoLink?: string;
   liveLink?: string;
+  detailsLink?: string;
 }
 
 export default function ProjectCard({
@@ -16,11 +17,18 @@ export default function ProjectCard({
   codeLink,
   demoLink,
   liveLink,
+  detailsLink,
 }: ProjectCardProps) {
   return (
     <div className="group relative bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-6 hover:border-amber-500/50 transition-colors flex flex-col gap-4 h-full">
       <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-        {title}
+        {detailsLink ? (
+          <a href={detailsLink} className="hover:text-amber-400 transition-colors">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </h3>
       
       <p className="text-zinc-400 text-sm flex-1 leading-relaxed">

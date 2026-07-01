@@ -48,6 +48,42 @@ const projectDetails = {
       "Built a workflow for targeted clip extraction to support downstream review and analysis.",
     ],
   },
+  "pygame-projects": {
+    title: "Pygame Projects",
+    description:
+      "A collection of early Python and Pygame experiments from 2019-2020 that helped me build confidence in game development and programming fundamentals.",
+    overview:
+      "These projects include mini-games and interactive tools such as Flappy Bird, Space Dodgers, Tic-Tac-Toe, and a paint app, reflecting an early stage of learning where I focused on building engaging experiences.",
+    highlights: [
+      "Built several small games and interactive applications with Python and Pygame.",
+      "Explored game development concepts like input handling, animation, collisions, and simple UI.",
+      "Used these projects as a foundation for learning how to structure playful software projects.",
+    ],
+  },
+  "notes-app": {
+    title: "Notes App",
+    description:
+      "One of my first full-stack applications, built with React and Django to create a simple notes experience with a modern frontend and backend persistence.",
+    overview:
+      "This project reflects my early work building a complete web application end to end, connecting a React frontend to a Django backend and learning how data flows through a full-stack system.",
+    highlights: [
+      "Built a full-stack notes application using React and Django.",
+      "Learned how to connect frontend interfaces with backend persistence.",
+      "Used the project as a stepping stone for more complex web applications later on.",
+    ],
+  },
+  "cpsc-210-gym-tracker": {
+    title: "CPSC 210 Gym Tracker App",
+    description:
+      "As part of my CPSC 210 coursework, I built a gym tracker app in Java that demonstrates object-oriented programming fundamentals and unit testing practices.",
+    overview:
+      "This project helped me practice core software engineering skills in Java, including clean class design, maintainable code structure, and test-driven development with JUnit.",
+    highlights: [
+      "Implemented a gym tracking application in Java with object-oriented design principles.",
+      "Built unit tests to verify functionality and strengthen reliability.",
+      "Used the project to deepen my understanding of software engineering fundamentals.",
+    ],
+  },
 } as const;
 
 export default async function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {

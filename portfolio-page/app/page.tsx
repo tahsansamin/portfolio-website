@@ -80,7 +80,7 @@ export default function Home() {
             <div className="h-px bg-zinc-800/60 flex-1"></div>
           </div>
 
-          <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-8 flex flex-col gap-2">
+          <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-8 flex flex-col gap-6">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
               <h3 className="text-xl font-bold text-white">University of British Columbia</h3>
               <span className="font-mono text-amber-500 text-sm">Expected 2029</span>
@@ -88,6 +88,24 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 text-zinc-400">
               <p>CS + Stats (GPA: 93.4%)</p>
               <p className="font-mono text-sm">Vancouver, BC</p>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+              <h3 className="text-xl font-bold text-white">IB Diploma</h3>
+              <span className="font-mono text-amber-500 text-sm">2025</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 text-zinc-400">
+              <p>Aga Khan High School Uganda</p>
+              <p className="font-mono text-sm">41/45 points</p>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+              <h3 className="text-xl font-bold text-white">IGCSE (O Levels)</h3>
+              <span className="font-mono text-amber-500 text-sm">2023</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 text-zinc-400">
+              <p>Aga Khan High School Uganda</p>
+              <p className="font-mono text-sm">8 A* and 1 A</p>
             </div>
           </div>
         </section>
@@ -137,6 +155,12 @@ export default function Home() {
               liveLink="https://street-watch-six.vercel.app/"
             />
             <ProjectCard
+              title="CPSC 210 Gym Tracker App (2026)"
+              description="As part of my CPSC 210 coursework, I built a gym tracker app in Java that demonstrates object-oriented programming fundamentals and unit testing practices. The project scored an overall 97/100 points."
+              techStack={["Java", "OOP", "JUnit"]}
+              codeLink="https://github.com/tahsansamin/CPSC-210-Gym-app"
+            />
+            <ProjectCard
               title="Rubis Data Entry Agent (June 2026)"
               description="Agentic data entry system using LangGraph that parses natural language and populates excel spreadsheets, replacing manual data entry."
               techStack={["LangGraph", "Agentic AI", "React", "FastAPI"]}
@@ -146,8 +170,9 @@ export default function Home() {
               title="UCF Crime Dataset CV (June 2025)"
               description="Fine-tuned Facebook's SlowFast CNN to classify 11 types of criminal activity from CCTV footage for targeted clip extraction."
               techStack={["PyTorch", "Scikit-learn", "NumPy", "Pandas"]}
-              codeLink="https://github.com/Tahsansamin/ucf-crime-dataset-cv"
+              codeLink="https://github.com/tahsansamin/UCF-crime-dataset-deeplearning"
             />
+            
             <ProjectCard
               title="Woda (October 2022)"
               description="Women-only ride-hailing app inspired by Uganda’s boda boda culture, built with React and Django. I designed the platform to address safety gaps in informal transport, presented it at the Aga Khan Business Expo 2022, and developed the supporting business plan, revenue model, and market strategy."
@@ -160,7 +185,62 @@ export default function Home() {
               techStack={["React", "Django", "REST APIs"]}
               codeLink="https://github.com/tahsansamin/Rubis-App"
             />
+            <ProjectCard
+              title="Pygame Projects (2019-2020)"
+              description="A collection of early Python and Pygame projects featuring games like Flappy Bird, Space Dodgers, Tic-Tac-Toe, and a paint app built while I was learning game development fundamentals."
+              techStack={["Python", "Pygame"]}
+              codeLink="https://github.com/tahsansamin/Pygame-projects"
+            />
+            <ProjectCard
+              title="Notes App (2022)"
+              description="One of my first full-stack applications, built with React and Django to create a simple notes experience with a modern frontend and backend persistence."
+              techStack={["React", "Django", "REST APIs"]}
+              codeLink="https://github.com/tahsansamin/Notes-App"
+            />
             
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="flex flex-col gap-8">
+          <div className="flex items-center gap-4">
+            <h2 className="font-mono text-amber-500 text-sm uppercase tracking-wider">// Skills</h2>
+            <div className="h-px bg-zinc-800/60 flex-1"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-white mb-4">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'JavaScript', 'Java'].map((skill) => (
+                  <span key={skill} className="px-2 py-1 bg-zinc-800/50 text-amber-500/80 text-xs font-mono rounded-md border border-zinc-700/50">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-white mb-4">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                {['React', 'FastAPI', 'LangChain', 'LangGraph', 'JUnit', 'Pytest', 'PyTorch', 'Supabase', 'Pinecone', 'ChromaDB', 'Django'].map((skill) => (
+                  <span key={skill} className="px-2 py-1 bg-zinc-800/50 text-amber-500/80 text-xs font-mono rounded-md border border-zinc-700/50">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#1a1a1a] border border-zinc-800/50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-white mb-4">AI / ML</h3>
+              <div className="flex flex-wrap gap-2">
+                {['RAG pipelines', 'Agentic AI', 'Multi-step agent architectures', 'ReAct', 'RAGAS evaluation', 'Deep Learning'].map((skill) => (
+                  <span key={skill} className="px-2 py-1 bg-zinc-800/50 text-amber-500/80 text-xs font-mono rounded-md border border-zinc-700/50">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
